@@ -31,13 +31,7 @@ const App = () => {
 export default App;
 
 const AppContainer = styled.div`
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   background-color: ${({ theme }) => theme.colorPrimary()};
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 `;
