@@ -21,6 +21,9 @@ const Header = () => {
                 </h1>
             </LogoContainer>
             <SearchBar />
+            <RightContainer>
+
+            </RightContainer>
         </HeaderContainer>
     )
 };
@@ -34,11 +37,16 @@ const HeaderContainer = styled.header`
     border-bottom: 1.5px solid ${({ theme }) => theme.colorSubSecondary()};
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 `;
 
 const LogoContainer = styled.div`
-  width: 15%;
+  width: 400px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -62,6 +70,21 @@ const LogoContainer = styled.div`
     top: 15px;
     bottom: 15px;
     right: 0;
+    border-right: 1.5px solid ${({ theme }) => theme.colorSubSecondary()};
+  }
+`;
+
+const RightContainer = styled.div`
+  width: 400px;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 0;
     border-right: 1.5px solid ${({ theme }) => theme.colorSubSecondary()};
   }
 `;
