@@ -2,6 +2,7 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 
 import { LogoIcon } from "../icons";
+import { SearchBar } from "../../components";
 
 const Header = () => {
 
@@ -19,6 +20,7 @@ const Header = () => {
                     Uml
                 </h1>
             </LogoContainer>
+            <SearchBar />
         </HeaderContainer>
     )
 };
@@ -32,7 +34,7 @@ const HeaderContainer = styled.header`
     border-bottom: 1.5px solid ${({ theme }) => theme.colorSubSecondary()};
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 30px;
 `;
 
 const LogoContainer = styled.div`
