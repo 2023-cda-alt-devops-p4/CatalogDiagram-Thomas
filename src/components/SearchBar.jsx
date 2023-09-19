@@ -3,17 +3,14 @@ import styled, { useTheme } from "styled-components";
 import { BsSearch } from "react-icons/bs";
 
 const SearchBar = () => {
+    
     const [value, setValue] = useState("");
     const theme = useTheme();
 
-    useEffect(() => {
-        console.log("Value changed : ", value);
-    }, [value]);
-
     return (
         <SearchBarContainer isEmpty={value.length < 1}>
-            <StyledBsSearch size={18} color={theme.colorSubSecondary()} />
             <TextInputContainer>
+                <StyledBsSearch size={18} color={theme.colorSubSecondary()} />
                 <TextInput
                     onChange={(e) => setValue(e.target.value)}
                     placeholder="Que voulez-vous rechercher ?"
@@ -28,7 +25,7 @@ export default SearchBar;
 
 const SearchBarContainer = styled.div`
     height: 100%;
-    width: 50%;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     position: relative;
@@ -66,19 +63,18 @@ const SearchBarContainer = styled.div`
 
 const TextInputContainer = styled.div`
     height: auto;
-    width: auto;
-    position: absolute;
-    left: 28px;
     width: 100%;
+    position: relative;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const ActiveBar = styled.div`
     height: 1.5px;
     background-color: ${({ theme }) => theme.colorSubPrimary()}; // Correction ici
     transition: width 400ms ease-in-out;
-    position: absolute;
-    bottom: -1.5px;
-    left: 0;
     width: ${({ isActive }) => (isActive ? "100%" : "0")}; // Utilisation de la prop isActive
 `;
 
