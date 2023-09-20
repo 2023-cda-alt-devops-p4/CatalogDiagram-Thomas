@@ -6,7 +6,10 @@ import { useState } from "react";
 
 import { TbLayoutSidebarLeftCollapseFilled, TbLayoutSidebarRightCollapseFilled } from "react-icons/tb";
 
-const SideBar = ({ isCollapsed, setIsCollapsed }) => {
+const SideBar = ({ 
+    isCollapsed, 
+    setIsCollapsed 
+}) => {
 
     return(
         <SideBarContainer isCollapsed={isCollapsed}>
@@ -17,7 +20,7 @@ const SideBar = ({ isCollapsed, setIsCollapsed }) => {
                     <StyledTbLayoutSidebarLeftCollapseFilled />
                 )}
             </ButtonCollapsed>
-            <SideBarNavigation />
+            <SideBarNavigation isCollapsed={isCollapsed} />
         </SideBarContainer>
     )
 }
@@ -35,6 +38,8 @@ const SideBarContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 400ms ease-in-out;
+
 
     ${({ isCollapsed }) => isCollapsed ? `
         width: 64px;

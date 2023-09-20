@@ -12,7 +12,7 @@ const MainLayout = () => {
     return(
         <>
             <Header />
-            <StyledMain>
+            <StyledMain isCollapsed={isCollapsed}>
                 <SideBar 
                     isCollapsed={isCollapsed} 
                     setIsCollapsed={setIsCollapsed} 
@@ -34,7 +34,14 @@ const StyledMain = styled.main`
     display: flex;
     flex-direction: row;
     padding-top: 100px;
-    padding-left: 400px;
+    transition: all 400ms ease-in-out;
+
+
+    ${({ isCollapsed }) => isCollapsed ? `
+        padding-left: 64px;
+    ` : `
+        padding-left: 400px;
+    `}
 `;
 
 const RouteContent = styled.div`
