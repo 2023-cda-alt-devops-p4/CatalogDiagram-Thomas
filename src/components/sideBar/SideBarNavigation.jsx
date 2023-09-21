@@ -7,6 +7,10 @@ import { FaHome  } from "react-icons/fa";
 import { FaDiagramProject } from "react-icons/fa6";
 import { LiaProjectDiagramSolid } from "react-icons/lia";
 
+import SideBarNavigationDropdown from "./SideBarNavigationDropdown";
+
+import { diagramsUmlStructs, diagramsUmlBehaviors } from "../../data";
+
 const SideBarNavigation = ({
     isCollapsed
 }) => {
@@ -16,27 +20,58 @@ const SideBarNavigation = ({
 
     return(
         <SideBarNavigationContainer>
-            <StyledNavLink 
+            <StyledNavLink
+                hasBefore={false}
                 isCollapsed={isCollapsed}
                 isActive={pathname.startsWith('/') && pathname.length === 1} 
                 to="/"
             >
-                <FaHome /> {!isCollapsed && 'Accueil'}
+                <FaHome /> 
+                {!isCollapsed && 'Accueil'}
             </StyledNavLink>
-            <StyledNavLink 
+            <SideBarNavigationDropdown
+                defaultIsOpen={pathname.startsWith("/uml-structs")}
                 isCollapsed={isCollapsed}
-                isActive={pathname.startsWith('/uml/')} 
-                to="/uml/"
+                icon={<FaDiagramProject />} 
+                title="UML Structurels"
             >
-                <FaDiagramProject /> {!isCollapsed && 'Diagrammes UML'}
-            </StyledNavLink>
-            <StyledNavLink 
+                {diagramsUmlStructs.map((diagramUml, diagramIndex) => (
+                    <StyledNavLink
+                        key={`link-uml-structs-${diagramIndex}`}
+                        isCollapsed={isCollapsed}
+                        isActive={pathname === `/uml-structs/${diagramUml?.uuid}`}
+                        to={`/uml-structs/${diagramUml?.uuid}`}
+                    >
+                        <LiaProjectDiagramSolid /> 
+                        {!isCollapsed && diagramUml?.title}
+                    </StyledNavLink>
+                ))}
+            </SideBarNavigationDropdown>
+            <SideBarNavigationDropdown
+                defaultIsOpen={pathname.startsWith("/uml-behaviors")}
                 isCollapsed={isCollapsed}
-                isActive={pathname.startsWith('/merise/')} 
-                to="/merise/"
+                icon={<FaDiagramProject />} 
+                title="UML Comportementaux"
             >
-                <LiaProjectDiagramSolid /> {!isCollapsed && 'Diagrammes Merise'}
-            </StyledNavLink>
+                {diagramsUmlBehaviors.map((diagramUml, diagramIndex) => (
+                    <StyledNavLink
+                        key={`link-uml-behaviors-${diagramIndex}`}
+                        isCollapsed={isCollapsed}
+                        isActive={pathname === `/uml-behaviors/${diagramUml?.uuid}`}
+                        to={`/uml-behaviors/${diagramUml?.uuid}`}
+                    >
+                        <LiaProjectDiagramSolid /> 
+                        {!isCollapsed && diagramUml?.title}
+                    </StyledNavLink>
+                ))}
+            </SideBarNavigationDropdown>
+            <SideBarNavigationDropdown 
+                isCollapsed={isCollapsed}
+                icon={<FaDiagramProject />} 
+                title="Merise"
+            >
+
+            </SideBarNavigationDropdown>
         </SideBarNavigationContainer>
     )
 }
@@ -48,7 +83,7 @@ const SideBarNavigationContainer = styled.nav`
     height: 90%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -62,6 +97,20 @@ const StyledNavLink = styled(NavLink)`
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    position: relative;
+
+    ${({ hasBefore = true, theme }) => hasBefore && `
+        &::before {
+            transition: all 400ms ease-in-out;
+            content: "";
+            position: absolute;
+            left: -15px;
+            height: 0.5px;
+            background-color: ${theme.colorSubPrimary()};
+            width: 0;
+        }
+    `}
+
 
     ${({ isCollapsed }) => isCollapsed ? `
         justify-content: center;
@@ -72,19 +121,27 @@ const StyledNavLink = styled(NavLink)`
     `}
 
     ${({ isActive, theme }) => isActive ? `
-        background-color: ${theme.colorSubPrimary(0.1)};
         color: ${theme.colorSubPrimary()};
 
         svg {
             color: ${theme.colorSubPrimary()};
             font-size: 20px;
         }
+
+        &::before {
+            width: 15px;
+        }
     ` : `
         color: ${theme.colorSubSecondary()};
     `}
 
     &:hover {
-        background-color: ${({ theme }) => theme.colorSubPrimary(0.1)};
         color: ${({ theme }) => theme.colorSubPrimary()};
+
+        ${({ hasBefore = true }) => hasBefore && `
+            &::before {
+                width: 15px;
+            }
+        `}
     }
 `;
