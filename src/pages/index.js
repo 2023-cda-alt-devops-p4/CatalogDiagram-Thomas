@@ -1,9 +1,10 @@
 import HomePage from "./HomePage";
-import UmlPage from "./UmlPage";
 import MerisePage from "./MerisePage";
+
+import UmlPage from "./Uml/UmlPage";
 
 export {
     HomePage,
-    UmlPage,
-    MerisePage
+    MerisePage,
+    UmlPage
 }
