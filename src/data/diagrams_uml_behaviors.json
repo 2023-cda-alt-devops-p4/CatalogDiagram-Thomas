@@ -2,36 +2,127 @@
     {
         "uuid": "1b4db790-d8f3-433b-9f6f-87b884c79614",
         "title": "Temps",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "2df99a16-6840-4be3-9606-5bacbdb0e19f",
         "title": "Aperçu des interactions",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "eb8c100b-c695-4bb4-8076-902e6b79b380",
         "title": "Communication",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "c88c0c28-5a3e-4adf-9929-0369a288c6b2",
         "title": "États-transitions",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "aa591cc4-c70e-4f02-a546-0d17459cddc6",
         "title": "Cas d'utilisation",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "48100e66-3fea-4de5-b0ea-2c2ed8cf873f",
         "title": "Séquence",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "a0f07073-69c5-474b-b15a-e2af202b3d3a",
         "title": "Activités",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     }
 ]

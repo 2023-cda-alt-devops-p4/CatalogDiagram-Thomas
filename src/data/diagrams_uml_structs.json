@@ -2,31 +2,117 @@
     {
         "uuid": "cd9c41c6-4146-4545-87f3-6aa262d271e5",
         "title": "Classes",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+            "Il s'agit de la structure de l'application.",
+            "On y trouve toutes les classes, leurs caractéristiques (comme les attributs) et comment elles sont connectées."
+        ],
+        "benefits": [
+            "Il offre une base solide pour le code",
+            "Facilite la communication sur la structure du système",
+            "Permet de définir des concepts clés de modélisation"
+        ],
+        "goodPratices": [
+            "Utiliser une notation cohérente pour les cardinalités.",
+            "Utiliser une notation cohérente pour la visibilité des attributs."
+        ],
+        "example": {
+            "description": [
+                "Pense à une application de gestion d'un zoo.",
+                "Tu as des classes, comme par exemple une classe de base pour les animaux et tu as les canards, les poissons et les zèbres.",
+                "Les attributs décrivent ce que chaque objet contient, comme par exemple âge qui est commun à tous les animaux."
+            ],
+            "image": "https://miro.medium.com/v2/resize:fit:1400/1*szU8ngrWSXmBNPYReMyK5w.png"
+        }
     },
     {
         "uuid": "0e5b45e4-bb11-44a5-998a-195b5d4ede0c",
         "title": "Composants",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "32bdb5d9-9b28-4e30-ab44-23ca93ca73c3",
         "title": "Déploiement",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "e6a95e7f-ac07-4e11-b2ee-8ff7710e9055",
         "title": "Structure composite",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "3e83a516-eec3-4119-a97a-ccf69bc294b4",
         "title": "Objets",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     },
     {
         "uuid": "adbbdfb7-9741-4dd1-86de-d2245d296067",
         "title": "Paquetages",
-        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "subTitle": "Diagramme UML",
+        "description": [
+            
+        ],
+        "benefits": [
+            
+        ],
+        "goodPratices": [
+
+        ],
+        "example": {
+            "description": [],
+            "image": ""
+        }
     }
 ]
