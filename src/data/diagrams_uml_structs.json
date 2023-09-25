@@ -48,17 +48,25 @@
         "title": "Déploiement",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "C'est comme une carte de jeu où tu places tes cartes et tes jetons pour voir comment tout fonctionne ensemble.",
+            "Il montre où ton application s'exécute, que ce soit sur des serveurs, des ordinateurs ou même des appareils mobiles."
         ],
         "benefits": [
-            
+            "Il te permet de visualiser comment ton application s'étend sur le matériel.",
+            "Il te permet de planifier les ressources nécessaires.",
+            "Il te permet d'anticiper les problèmes de performance."
         ],
         "goodPratices": [
-
+            "Utilise des flèches et des annotations pour expliquer les connexions.",
+            "Assure-toi que chaque élément est bien étiqueté."
         ],
         "example": {
-            "description": [],
-            "image": ""
+            "description": [
+                "Image que tu vas sur ton application web, la première chose c'est toi qui vas sur le navigateur.",
+                "Le navigateur appelle ensuite le serveur ou est déployé ton application web, il te renverra ensuite l'interface utilisateur",
+                "et déclenchera plein de processus comme par exemple ajouter des logs, ou encore contactait la base de données."
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/UML_Diagram_Deployment.svg/1920px-UML_Diagram_Deployment.svg.png"
         }
     },
     {
