@@ -12,12 +12,12 @@ const SideBarNavigationDropdown = ({
     icon = <></>,
     children
 }) => {
-
     const [isOpen, setIsOpen] = useState(defaultIsOpen);
     const theme = useTheme();
 
     return(
         <SideBarNavDropdownContainer isActive={isOpen}>
+
             <ButtonNavigationDropdown
                 isCollapsed={isCollapsed}
                 isActive={isOpen}
@@ -27,13 +27,11 @@ const SideBarNavigationDropdown = ({
                 {!isCollapsed && title}
                 {!isCollapsed && <StyledBiSolidRightArrow isOpen={isOpen} size={18} />}
             </ButtonNavigationDropdown>
+
             <NavigationDropdownContent isCollapsed={isCollapsed}>
-                {isOpen && (
-                    <>
-                        {children}
-                    </>
-                )}
+                {isOpen && children}
             </NavigationDropdownContent>
+
         </SideBarNavDropdownContainer>
     )
 }
