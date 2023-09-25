@@ -20,8 +20,10 @@ const SideBarNavigation = ({
 
     return(
         <SideBarNavigationContainer>
+
             <StyledNavLink
                 hasBefore={false}
+                isSubLink={false}
                 isCollapsed={isCollapsed}
                 isActive={pathname.startsWith('/') && pathname.length === 1} 
                 to="/"
@@ -29,6 +31,7 @@ const SideBarNavigation = ({
                 <FaHome /> 
                 {!isCollapsed && 'Accueil'}
             </StyledNavLink>
+
             <SideBarNavigationDropdown
                 defaultIsOpen={pathname.startsWith("/uml-structs")}
                 isCollapsed={isCollapsed}
@@ -47,6 +50,7 @@ const SideBarNavigation = ({
                     </StyledNavLink>
                 ))}
             </SideBarNavigationDropdown>
+
             <SideBarNavigationDropdown
                 defaultIsOpen={pathname.startsWith("/uml-behaviors")}
                 isCollapsed={isCollapsed}
@@ -65,6 +69,7 @@ const SideBarNavigation = ({
                     </StyledNavLink>
                 ))}
             </SideBarNavigationDropdown>
+
             <SideBarNavigationDropdown 
                 isCollapsed={isCollapsed}
                 icon={<FaDiagramProject />} 
@@ -72,6 +77,7 @@ const SideBarNavigation = ({
             >
 
             </SideBarNavigationDropdown>
+
         </SideBarNavigationContainer>
     )
 }
@@ -120,8 +126,9 @@ const StyledNavLink = styled(NavLink)`
         width: 100%;
     `}
 
-    ${({ isActive, theme }) => isActive ? `
+    ${({ isActive, theme, isSubLink = true }) => isActive ? `
         color: ${theme.colorSubPrimary()};
+        background-color: ${!isSubLink ? theme.colorSubPrimary(0.1) : "transparent"};
 
         svg {
             color: ${theme.colorSubPrimary()};
@@ -136,6 +143,7 @@ const StyledNavLink = styled(NavLink)`
     `}
 
     &:hover {
+        background-color: ${({ isSubLink = true, theme }) => !isSubLink ? theme.colorSubPrimary(0.1) : "transparent"};
         color: ${({ theme }) => theme.colorSubPrimary()};
 
         ${({ hasBefore = true }) => hasBefore && `
