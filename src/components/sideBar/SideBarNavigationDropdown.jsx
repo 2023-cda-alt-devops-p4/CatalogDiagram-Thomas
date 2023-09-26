@@ -16,19 +16,19 @@ const SideBarNavigationDropdown = ({
     const theme = useTheme();
 
     return(
-        <SideBarNavDropdownContainer isActive={isOpen}>
+        <SideBarNavDropdownContainer $isActive={isOpen}>
 
             <ButtonNavigationDropdown
-                isCollapsed={isCollapsed}
-                isActive={isOpen}
+                $isCollapsed={isCollapsed}
+                $isActive={isOpen}
                 onClick={() => setIsOpen((prevState) => !prevState)}
             >
                 {icon}
                 {!isCollapsed && title}
-                {!isCollapsed && <StyledBiSolidRightArrow isOpen={isOpen} size={18} />}
+                {!isCollapsed && <StyledBiSolidRightArrow $isOpen={isOpen} size={18} />}
             </ButtonNavigationDropdown>
 
-            <NavigationDropdownContent isCollapsed={isCollapsed}>
+            <NavigationDropdownContent $isCollapsed={isCollapsed}>
                 {isOpen && children}
             </NavigationDropdownContent>
 
@@ -43,7 +43,7 @@ const SideBarNavDropdownContainer = styled.div`
     width: 100%;
     position: relative;
 
-    ${({ isActive, theme }) => isActive && `
+    ${({ $isActive, theme }) => $isActive && `
         border-left: 0.5px solid ${theme.colorSubPrimary()};
     `}
 `;
@@ -59,7 +59,7 @@ const StyledBiSolidRightArrow = styled(BiSolidRightArrow)`
     transition: all 300ms linear;
     gap: 5px;
 
-    ${({ isOpen }) => isOpen ? `
+    ${({ $isOpen }) => $isOpen ? `
         transform: rotate(90deg);
     ` : `
         transform: rotate(0deg);
@@ -75,7 +75,7 @@ const NavigationDropdownContent = styled.div`
     padding-top: 5px;
     overflow: hidden;
 
-    ${({ isCollapsed }) => !isCollapsed && `
+    ${({ $isCollapsed }) => !$isCollapsed && `
         padding-left: 15px;
     `}
 `;
@@ -97,12 +97,12 @@ const ButtonNavigationDropdown = styled.button`
     cursor: pointer;
     width: 100%;
 
-    ${({ isCollapsed }) => isCollapsed && `
+    ${({ $isCollapsed }) => $isCollapsed && `
         justify-content: center;
     `}
 
     
-    ${({ isActive, theme }) => isActive ? `
+    ${({ $isActive, theme }) => $isActive ? `
         background-color: ${theme.colorSubPrimary(0.1)};
         color: ${theme.colorSubPrimary()};
 
@@ -147,7 +147,7 @@ const StyledNavLink = styled(NavLink)`
         width: 0;
     }
 
-    ${({ isCollapsed }) => isCollapsed ? `
+    ${({ $isCollapsed }) => $isCollapsed ? `
         justify-content: center;
         width: 90%;
         align-self: center;
@@ -155,7 +155,7 @@ const StyledNavLink = styled(NavLink)`
         width: 100%;
     `}
 
-    ${({ isActive, theme }) => isActive ? `
+    ${({ $isActive, theme }) => $isActive ? `
         color: ${theme.colorSubPrimary()};
 
         svg {

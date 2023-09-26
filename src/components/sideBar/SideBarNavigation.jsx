@@ -22,10 +22,10 @@ const SideBarNavigation = ({
         <SideBarNavigationContainer>
 
             <StyledNavLink
-                hasBefore={false}
-                isSubLink={false}
-                isCollapsed={isCollapsed}
-                isActive={pathname.startsWith('/') && pathname.length === 1} 
+                $hasBefore={false}
+                $isSubLink={false}
+                $isCollapsed={isCollapsed}
+                $isActive={pathname.startsWith('/') && pathname.length === 1} 
                 to="/"
             >
                 <FaHome /> 
@@ -41,8 +41,8 @@ const SideBarNavigation = ({
                 {diagramsUmlStructs.map((diagramUml, diagramIndex) => (
                     <StyledNavLink
                         key={`link-uml-structs-${diagramIndex}`}
-                        isCollapsed={isCollapsed}
-                        isActive={pathname === `/uml-structs/${diagramUml?.uuid}`}
+                        $isCollapsed={isCollapsed}
+                        $isActive={pathname === `/uml-structs/${diagramUml?.uuid}`}
                         to={`/uml-structs/${diagramUml?.uuid}`}
                     >
                         <LiaProjectDiagramSolid /> 
@@ -60,8 +60,8 @@ const SideBarNavigation = ({
                 {diagramsUmlBehaviors.map((diagramUml, diagramIndex) => (
                     <StyledNavLink
                         key={`link-uml-behaviors-${diagramIndex}`}
-                        isCollapsed={isCollapsed}
-                        isActive={pathname === `/uml-behaviors/${diagramUml?.uuid}`}
+                        $isCollapsed={isCollapsed}
+                        $isActive={pathname === `/uml-behaviors/${diagramUml?.uuid}`}
                         to={`/uml-behaviors/${diagramUml?.uuid}`}
                     >
                         <LiaProjectDiagramSolid /> 
@@ -105,7 +105,7 @@ const StyledNavLink = styled(NavLink)`
     gap: 5px;
     position: relative;
 
-    ${({ hasBefore = true, theme }) => hasBefore && `
+    ${({ $hasBefore = true, theme }) => $hasBefore && `
         &::before {
             transition: all 400ms ease-in-out;
             content: "";
@@ -118,7 +118,7 @@ const StyledNavLink = styled(NavLink)`
     `}
 
 
-    ${({ isCollapsed }) => isCollapsed ? `
+    ${({ $isCollapsed }) => $isCollapsed ? `
         justify-content: center;
         width: 90%;
         align-self: center;
@@ -126,9 +126,9 @@ const StyledNavLink = styled(NavLink)`
         width: 100%;
     `}
 
-    ${({ isActive, theme, isSubLink = true }) => isActive ? `
+    ${({ $isActive, theme, $isSubLink = true }) => $isActive ? `
         color: ${theme.colorSubPrimary()};
-        background-color: ${!isSubLink ? theme.colorSubPrimary(0.1) : "transparent"};
+        background-color: ${!$isSubLink ? theme.colorSubPrimary(0.1) : "transparent"};
 
         svg {
             color: ${theme.colorSubPrimary()};
@@ -143,10 +143,10 @@ const StyledNavLink = styled(NavLink)`
     `}
 
     &:hover {
-        background-color: ${({ isSubLink = true, theme }) => !isSubLink ? theme.colorSubPrimary(0.1) : "transparent"};
+        background-color: ${({ $isSubLink = true, theme }) => !$isSubLink ? theme.colorSubPrimary(0.1) : "transparent"};
         color: ${({ theme }) => theme.colorSubPrimary()};
 
-        ${({ hasBefore = true }) => hasBefore && `
+        ${({ $hasBefore = true }) => $hasBefore && `
             &::before {
                 width: 15px;
             }

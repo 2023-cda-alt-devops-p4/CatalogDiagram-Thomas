@@ -2,7 +2,7 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 
 import { LogoIcon } from "../icons";
-import { SearchBar } from "../../components";
+import { SearchBar } from "../../components/searchBar";
 
 const Header = () => {
 
@@ -17,7 +17,7 @@ const Header = () => {
                 />
                 <h1>
                     Catalogue<br/>
-                    Uml
+                    Uml<br/>
                 </h1>
             </LogoContainer>
             <SearchBar />

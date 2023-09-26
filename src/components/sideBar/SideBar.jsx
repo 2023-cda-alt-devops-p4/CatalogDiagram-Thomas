@@ -12,7 +12,7 @@ const SideBar = ({
 }) => {
 
     return(
-        <SideBarContainer isCollapsed={isCollapsed}>
+        <SideBarContainer $isCollapsed={isCollapsed}>
             <ButtonCollapsed onClick={() => setIsCollapsed((prevState) => !prevState)}>
                 {isCollapsed ? (
                     <StyledTbLayoutSidebarRightCollapseFilled />
@@ -41,7 +41,7 @@ const SideBarContainer = styled.div`
     transition: all 400ms ease-in-out;
 
 
-    ${({ isCollapsed }) => isCollapsed ? `
+    ${({ $isCollapsed }) => $isCollapsed ? `
         width: 64px;
     ` : `
         width: 400px;

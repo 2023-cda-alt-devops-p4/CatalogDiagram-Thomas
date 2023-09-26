@@ -12,7 +12,7 @@ const MainLayout = () => {
     return(
         <>
             <Header />
-            <StyledMain isCollapsed={isCollapsed}>
+            <StyledMain $isCollapsed={isCollapsed}>
                 <SideBar 
                     isCollapsed={isCollapsed} 
                     setIsCollapsed={setIsCollapsed} 
@@ -37,7 +37,7 @@ const StyledMain = styled.main`
     transition: all 400ms ease-in-out;
 
 
-    ${({ isCollapsed }) => isCollapsed ? `
+    ${({ $isCollapsed }) => $isCollapsed ? `
         padding-left: 64px;
     ` : `
         padding-left: 400px;
