@@ -2,20 +2,49 @@ import React, { useState, useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { BsSearch } from "react-icons/bs";
 
+import SearchDropdownResult from "./SearchDropdownResult";
+
+import { diagramsUmlBehaviors, diagramsUmlStructs } from "../../data";
+
 const SearchBar = () => {
     
     const [value, setValue] = useState("");
     const theme = useTheme();
 
+    const searchFilter = (diagram) => {
+        if ( value.length < 1 )
+            return false;
+
+        const searchValue = value.toLowerCase();
+        const diagramTitle = diagram?.title.toLowerCase();
+        const diagramDescription = diagram?.description.map(description => description.toLowerCase());
+
+        return diagramTitle.includes(searchValue) || diagramDescription.includes(searchValue);
+    }
+
+    const resultsUmlStructs = diagramsUmlStructs.filter(searchFilter).map(diagram => ({ ...diagram, routePrefix: "uml-structs" }));
+    const resultsUmlBehaviors = diagramsUmlBehaviors.filter(searchFilter).map(diagram => ({ ...diagram, routePrefix: "uml-behaviors" }));
+    const results = [
+        ...resultsUmlStructs,
+        ...resultsUmlBehaviors
+    ];
+
     return (
-        <SearchBarContainer isEmpty={value.length < 1}>
+        <SearchBarContainer $isEmpty={value.length < 1}>
             <TextInputContainer>
                 <StyledBsSearch size={18} color={theme.colorSubSecondary()} />
                 <TextInput
                     onChange={(e) => setValue(e.target.value)}
                     placeholder="Que voulez-vous rechercher ?"
+                    value={value}
                 />
-                <ActiveBar isActive={value.length > 0} />
+                <ActiveBar $isActive={value.length > 0} />
+                {results.length > 0 && (
+                    <SearchDropdownResult
+                        clearSearch={() => setValue("")}
+                        results={results} 
+                    />
+                )}
             </TextInputContainer>
         </SearchBarContainer>
     );
@@ -30,8 +59,8 @@ const SearchBarContainer = styled.div`
     align-items: center;
     position: relative;
 
-    ${({ isEmpty, theme }) =>
-        !isEmpty &&
+    ${({ $isEmpty, theme }) =>
+        !$isEmpty &&
         `
         svg { fill: ${theme.colorSubPrimary()} !important; }
 
@@ -73,14 +102,17 @@ const TextInputContainer = styled.div`
 
 const ActiveBar = styled.div`
     height: 1.5px;
-    background-color: ${({ theme }) => theme.colorSubPrimary()}; // Correction ici
+    background-color: ${({ theme }) => theme.colorSubPrimary()};
     transition: width 400ms ease-in-out;
-    width: ${({ isActive }) => (isActive ? "100%" : "0")}; // Utilisation de la prop isActive
+    width: ${({ $isActive }) => ($isActive ? "100%" : "0")};
+    position: relative;
+    z-index: 500;
 `;
 
 const StyledBsSearch = styled(BsSearch)`
     position: absolute;
     left: 0;
+    z-index: 500;
 `;
 
 const TextInput = styled.input`
@@ -92,6 +124,8 @@ const TextInput = styled.input`
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     width: 100%;
+    position: relative;
+    z-index: 500;
     
     &::placeholder {
         color: ${({ theme }) => theme.colorSubSecondary()};
