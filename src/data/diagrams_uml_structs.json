@@ -30,17 +30,24 @@
         "title": "Composants",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Imagine que tu es un chef d'orchestre qui guide différents musiciens pour jouer ensemble une mélodie harmonieuse.",
+            "Le diagramme de composant, c'est un peu comme ta partition musicale, où chaque instrument représente un composant logiciel.",
+            "Il te montre comment ces composants interagissent pour créer une belle symphonie, c'est-à-dire ton logiciel."
         ],
         "benefits": [
-            
+            "Facilite la compréhension de la structure.",
+            "Permet d'identifier les dépendances clés entre les composants.",
+            "Aide à coordonner et à planifier le développement."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour montrer les interactions entre composants.",
+            "Assure-toi que les interfaces sont bien définies."
         ],
         "example": {
-            "description": [],
-            "image": ""
+            "description": [
+                
+            ],
+            "image": "https://www.ionos.fr/digitalguide/fileadmin/DigitalGuide/Screenshots_2020/FR-uml-component-diagram-2.png"
         }
     },
     {
