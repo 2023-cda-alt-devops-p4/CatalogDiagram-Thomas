@@ -5,11 +5,14 @@ import { BsSearch } from "react-icons/bs";
 import SearchDropdownResult from "./SearchDropdownResult";
 
 import { diagramsUmlBehaviors, diagramsUmlStructs } from "../../data";
+import { useResponsive } from "../../hooks";
 
 const SearchBar = () => {
     
     const [value, setValue] = useState("");
     const theme = useTheme();
+
+    const { isGlobalMobile, isTablet } = useResponsive();
 
     const searchFilter = (diagram) => {
         if ( value.length < 1 )
@@ -30,8 +33,11 @@ const SearchBar = () => {
     ];
 
     return (
-        <SearchBarContainer $isEmpty={value.length < 1}>
-            <TextInputContainer>
+        <SearchBarContainer 
+            $isMobileOrTablet={isGlobalMobile || isTablet} 
+            $isEmpty={value.length < 1}
+        >
+            <TextInputContainer $isMobileOrTablet={isGlobalMobile || isTablet}>
                 <StyledBsSearch size={18} color={theme.colorSubSecondary()} />
                 <TextInput
                     onChange={(e) => setValue(e.target.value)}
@@ -53,11 +59,18 @@ const SearchBar = () => {
 export default SearchBar;
 
 const SearchBarContainer = styled.div`
-    height: 100%;
-    flex-grow: 1;
     display: flex;
     align-items: center;
     position: relative;
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+    ` : `
+        flex-grow: 1;
+        height: 100%;
+    `}
 
     ${({ $isEmpty, theme }) =>
         !$isEmpty &&
@@ -92,12 +105,17 @@ const SearchBarContainer = styled.div`
 
 const TextInputContainer = styled.div`
     height: auto;
-    width: 100%;
     position: relative;
     padding-left: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+        width: 95%;
+    ` : `
+        width: 100%;
+    `}
 `;
 
 const ActiveBar = styled.div`

@@ -4,13 +4,16 @@ import styled, { useTheme } from "styled-components";
 import { LogoIcon } from "../icons";
 import { SearchBar } from "../../components/searchBar";
 
+import { useResponsive } from "../../hooks";
+
 const Header = () => {
 
+    const { isGlobalMobile, isTablet, isLaptop } = useResponsive();
     const theme = useTheme();
 
     return(
-        <HeaderContainer>
-            <LogoContainer>
+        <HeaderContainer $isMobileOrTablet={isGlobalMobile || isTablet}>
+            <LogoContainer $isMobileOrTablet={isGlobalMobile || isTablet}>
                 <LogoIcon 
                     size={64} 
                     color={theme.colorSubPrimary()} 
@@ -21,9 +24,11 @@ const Header = () => {
                 </h1>
             </LogoContainer>
             <SearchBar />
-            <RightContainer>
+            {(!isGlobalMobile && !isTablet && !isLaptop) && (
+              <RightContainer>
 
-            </RightContainer>
+              </RightContainer>
+            )}
         </HeaderContainer>
     )
 };
@@ -32,22 +37,26 @@ export default Header;
 
 const HeaderContainer = styled.header`
     width: 100%;
-    height: 100px;
     background-color: ${({ theme }) => theme.colorPrimary()};
     border-bottom: 1.5px solid ${({ theme }) => theme.colorSubSecondary()};
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 30px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+      flex-direction: column;
+      height: 200px;
+    ` : `
+      flex-direction: row;
+      height: 100px;
+      gap: 30px;
+    `}
 `;
 
 const LogoContainer = styled.div`
-  width: 400px;
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,6 +64,25 @@ const LogoContainer = styled.div`
   gap: 15px;
   position: relative;
   overflow: hidden;
+
+  ${({ $isMobileOrTablet, theme }) => $isMobileOrTablet ? `
+    width: 100%;
+    height: 150px;
+    padding: 20px 0;
+    border-bottom: 1.5px solid ${theme.colorSubSecondary()};
+  ` : `
+    width: 400px;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      bottom: 15px;
+      right: 0;
+      border-right: 1.5px solid ${theme.colorSubSecondary()};
+    }
+  `}
 
   h1 {
     font-size: 24px;
@@ -64,14 +92,6 @@ const LogoContainer = styled.div`
     text-transform: uppercase;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    right: 0;
-    border-right: 1.5px solid ${({ theme }) => theme.colorSubSecondary()};
-  }
 `;
 
 const RightContainer = styled.div`

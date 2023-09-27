@@ -6,13 +6,20 @@ import { useState } from "react";
 
 import { TbLayoutSidebarLeftCollapseFilled, TbLayoutSidebarRightCollapseFilled } from "react-icons/tb";
 
+import { useResponsive } from "../../hooks";
+
 const SideBar = ({ 
     isCollapsed, 
     setIsCollapsed 
 }) => {
 
+    const { isGlobalMobile, isTablet } = useResponsive();
+
     return(
-        <SideBarContainer $isCollapsed={isCollapsed}>
+        <SideBarContainer 
+            $isMobileOrTablet={isGlobalMobile || isTablet} 
+            $isCollapsed={isCollapsed}
+        >
             <ButtonCollapsed onClick={() => setIsCollapsed((prevState) => !prevState)}>
                 {isCollapsed ? (
                     <StyledTbLayoutSidebarRightCollapseFilled />
@@ -28,10 +35,8 @@ const SideBar = ({
 export default SideBar;
 
 const SideBarContainer = styled.div`
-
     height: 100%;
     position: fixed;
-    top: 100px;
     left: 0;
     bottom: 0;
     z-index: 998;
@@ -40,13 +45,18 @@ const SideBarContainer = styled.div`
     align-items: center;
     transition: all 400ms ease-in-out;
 
-
     ${({ $isCollapsed }) => $isCollapsed ? `
         width: 64px;
     ` : `
         width: 400px;
     `}
-    
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+        top: 200px;
+    ` : `
+        top: 100px;
+    `}
+
     &::before {
         content: "";
         position: absolute;

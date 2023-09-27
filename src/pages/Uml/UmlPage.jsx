@@ -5,10 +5,15 @@ import styled from "styled-components";
 import { diagramsUmlStructs, diagramsUmlBehaviors } from "../../data";
 import { useLocation } from "react-router-dom";
 
+import { useResponsive } from "../../hooks";
+
+
 const UmlStructsPage = () => {
 
     const { pathname } = useLocation();
     const { uuid } = useParams();
+
+    const { isGlobalMobile, isTablet } = useResponsive();
 
     const currentDiagram = (pathname.startsWith('/uml-behaviors') ? diagramsUmlBehaviors : diagramsUmlStructs)
         .find(diagram => diagram?.uuid === uuid);
@@ -17,12 +22,12 @@ const UmlStructsPage = () => {
         return <Navigate to="/" />;
 
     return(
-        <UmlStructsContainer>
+        <UmlStructsContainer $isMobileOrTablet={isGlobalMobile || isTablet}>
             <HeaderPage>
                 <TitlePage>{currentDiagram?.title}</TitlePage>
                 <SubTitle>{currentDiagram?.subTitle}</SubTitle>
             </HeaderPage>
-            <ContentPage>
+            <ContentPage $isMobileOrTablet={isGlobalMobile || isTablet}>
 
                 <ContentContainer>
                     <Title>Description</Title>
@@ -87,7 +92,12 @@ const UmlStructsContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 35px;
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+        padding: 20px;
+    ` : `
+        padding: 35px;
+    `}
 `;
 
 const HeaderPage = styled.div`
@@ -131,6 +141,10 @@ const List = styled.ul`
     gap: 5px;
     padding-top: 5px;
     list-style: none;
+
+    ${({ isLaptop }) => isLaptop && `
+        background-color: red;
+    `}
 `;
 
 const ListElement = styled.li`
@@ -171,7 +185,14 @@ const ContentPage = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 90px;
-    padding-left: 35px;
+
     gap: 90px;
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+        padding-top: 60px;
+        padding-left: 15px;
+    ` : `
+        padding-top: 90px;
+        padding-left: 35px;
+    `}
 `;
