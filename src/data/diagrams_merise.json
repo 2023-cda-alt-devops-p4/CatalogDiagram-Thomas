@@ -1,0 +1,202 @@
+[
+    {
+        "uuid": "ad73f30b-1fe1-496a-83b4-802b1b3b72c3",
+        "title": "Conceptuel des données",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "6cd299e4-c53e-4741-987a-114436ff34f5",
+        "title": "Conceptuel de traitement",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "9d30b5b6-8f4a-44ca-93cc-bf336a1a4da5",
+        "title": "Conceptuel de communication",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "5ad0361b-6b46-4cd0-b5e8-5b7eb977af07",
+        "title": "Organisationnel de données",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "65f8cfa7-a54d-428f-82fa-b57c479df420",
+        "title": "Organisationnel de traitement",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "d4419922-efdf-43ff-a086-e96ff394194f",
+        "title": "Flux de données",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "0ebe5567-4db6-4e13-a6bd-39ece3106ce8",
+        "title": "Flux de contrôle",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "ace8a1d2-dfac-45ca-885c-3d9e7eaed22c",
+        "title": "Architecture des Systèmes d'Information",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "01a7e55c-3b2b-410e-a534-0f747ff2bb6c",
+        "title": "Flux d'Architecture",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    },
+    {
+        "uuid": "6fe20068-100e-4e60-a5ba-5cdbf92f46e5",
+        "title": "Architecture des Organisations",
+        "subTitle": "Diagramme Merise",
+        "description": [
+
+        ],
+        "goodPratices": [
+
+        ],
+        "benefits": [
+
+        ],
+        "example": {
+            "description": [
+
+            ],
+            "image": ""
+        }
+    }
+]

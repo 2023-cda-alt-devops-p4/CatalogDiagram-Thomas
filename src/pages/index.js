@@ -1,10 +1,7 @@
 import HomePage from "./HomePage";
-import MerisePage from "./MerisePage";
-
-import UmlPage from "./Uml/UmlPage";
+import DataPage from "./DataPage";
 
 export {
     HomePage,
-    MerisePage,
-    UmlPage
+    DataPage
 }

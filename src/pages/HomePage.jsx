@@ -6,6 +6,7 @@ const HomePage = () => {
     return(
         <HomePageContainer>
             <h1>Home page</h1>
+
         </HomePageContainer>
     )
 }
