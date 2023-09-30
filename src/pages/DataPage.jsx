@@ -2,10 +2,15 @@ import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styled from "styled-components";
 
-import { diagramsUmlStructs, diagramsUmlBehaviors } from "../../data";
+import { 
+    diagramsUmlStructs, 
+    diagramsUmlBehaviors, 
+    diagramsMerise 
+} from "../data";
+
 import { useLocation } from "react-router-dom";
 
-import { useResponsive } from "../../hooks";
+import { useResponsive } from "../hooks";
 
 
 const UmlStructsPage = () => {
@@ -15,8 +20,10 @@ const UmlStructsPage = () => {
 
     const { isGlobalMobile, isTablet } = useResponsive();
 
-    const currentDiagram = (pathname.startsWith('/uml-behaviors') ? diagramsUmlBehaviors : diagramsUmlStructs)
-        .find(diagram => diagram?.uuid === uuid);
+    const currentDiagram = (
+        pathname.startsWith('/uml-behaviors') ? diagramsUmlBehaviors : 
+        pathname.startsWith('/uml-structs') ? diagramsUmlStructs : diagramsMerise
+    ).find(diagram => diagram?.uuid === uuid);
 
     if ( currentDiagram === null || currentDiagram === undefined )
         return <Navigate to="/" />;
