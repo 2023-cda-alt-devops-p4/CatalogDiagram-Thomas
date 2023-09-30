@@ -8,8 +8,8 @@ import { useResponsive } from "../../hooks";
 
 const MainLayout = () => {
 
-    const [isCollapsed, setIsCollapsed] = useState(false);
     const { isGlobalMobile, isTablet } = useResponsive();
+    const [isCollapsed, setIsCollapsed] = useState(!(!isGlobalMobile && !isTablet));
 
     return(
         <>
