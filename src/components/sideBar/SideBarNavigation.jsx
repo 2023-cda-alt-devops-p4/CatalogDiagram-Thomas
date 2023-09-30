@@ -9,7 +9,11 @@ import { LiaProjectDiagramSolid } from "react-icons/lia";
 
 import SideBarNavigationDropdown from "./SideBarNavigationDropdown";
 
-import { diagramsUmlStructs, diagramsUmlBehaviors } from "../../data";
+import { 
+    diagramsUmlStructs, 
+    diagramsUmlBehaviors,
+    diagramsMerise
+} from "../../data";
 
 const SideBarNavigation = ({
     isCollapsed
@@ -75,7 +79,17 @@ const SideBarNavigation = ({
                 icon={<FaDiagramProject />} 
                 title="Merise"
             >
-
+                {diagramsMerise.map((diagramMerise, diagramIndex) => (
+                    <StyledNavLink
+                        key={`link-merise-${diagramIndex}`}
+                        $isCollapsed={isCollapsed}
+                        $isActive={pathname === `/merise/${diagramMerise?.uuid}`}
+                        to={`/merise/${diagramMerise?.uuid}`}
+                    >
+                        <LiaProjectDiagramSolid /> 
+                        {!isCollapsed && diagramMerise?.title}
+                    </StyledNavLink>
+                ))}
             </SideBarNavigationDropdown>
 
         </SideBarNavigationContainer>
