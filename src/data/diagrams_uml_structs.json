@@ -45,7 +45,7 @@
         ],
         "example": {
             "description": [
-                
+
             ],
             "image": "https://www.ionos.fr/digitalguide/fileadmin/DigitalGuide/Screenshots_2020/FR-uml-component-diagram-2.png"
         }
@@ -81,17 +81,25 @@
         "title": "Structure composite",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme composite, c'est un peu comme une mosaïque de petits morceaux de ton application.",
+            "C'est une façon de montrer comment des éléments plus petits s'assemblent pour former quelque chose de plus grand.",
+            "\n",
+            "Imagine-le comme un puzzle qui te montre comment les parties de ton application s'emboîtent pour créer une vue globale.",
+            "Ça t'aide à visualiser la structure et la composition."
         ],
         "benefits": [
-            
+            "Clarifie la structure interne de ton application.",
+            "Aide à gérer la complexité en divisant l'application en parties plus petites.",
+            "Facilite la communication entre les membres de l'équipe."
         ],
         "goodPratices": [
-
+            "Utilise des compositions pour montrer comment les parties se combinent pour créer un tout.",
+            "Assure-toi que la composition a du sens en termes de structure.",
+            "Indique les relations et les interactions clés entre les éléments."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://www.codingame.com/servlet/fileservlet?id=15644456870972"
         }
     },
     {
@@ -99,17 +107,26 @@
         "title": "Objets",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme d'objets, c'est comme une photo instantanée de ton application à un moment précis.",
+            "Ça te montre les objets qui font le boulot et comment ils sont connectés les uns aux autres.",
+            "\n",
+            "Imagine-le comme un plan pour comprendre qui parle à qui dans ton application.",
+            "Ça t'aide à voir quels objets discutent et échangent des infos."
         ],
         "benefits": [
-            
+            "Tu peux mieux comprendre comment les morceaux de ton application interagissent.",
+            "Ça te montre les données que les objets manipulent.",
+            "C'est super pour repérer les problèmes dans ton code."
         ],
         "goodPratices": [
-
+            "Utilisez une notation claire pour nommer les objets, leurs attributs et les relations entre eux.",
+            "Regroupez les objets de manière logique pour rendre le diagramme plus lisible.",
+            "Gardez le diagramme à jour pour refléter l'état actuel de l'application.",
+            "Assure-toi que les noms et les descriptions des objets sont compréhensibles."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://i.ytimg.com/vi/z8Ugsspml0o/maxresdefault.jpg"
         }
     },
     {
@@ -117,17 +134,25 @@
         "title": "Paquetages",
         "subTitle": "Diagramme UML",
         "description": [
-            
+            "Le diagramme de paquetages, c'est un peu comme une boîte qui contient des morceaux de ton système.",
+            "Il t'aide à organiser et à montrer comment les parties de ton logiciel sont regroupées.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble de comment ton système est structuré.",
+            "Ça te permet de voir les grandes catégories ou les modules qui composent ton application."
         ],
         "benefits": [
-            
+            "Clarifie la structure de ton application.",
+            "Aide à gérer la complexité en la divisant en parties gérables.",
+            "Facilite la communication entre les membres de l'équipe."
         ],
         "goodPratices": [
-
+            "Utilise des paquetages pour regrouper des éléments connexes.",
+            "Assure-toi que les paquetages ont des noms significatifs.",
+            "Montre les dépendances entre les paquetages si besoin."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/package-diagram-sample.jpg"
         }
     }
 ]

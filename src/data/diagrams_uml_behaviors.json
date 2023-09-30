@@ -4,17 +4,25 @@
         "title": "Temps",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme de temps, c'est comme une ligne du temps pour ton application.",
+            "C'est un moyen de montrer comment les événements se produisent dans un ordre chronologique.",
+            "\n",
+            "Imagine-le comme un enregistrement des actions et des événements qui se déroulent dans ton application au fil du temps.",
+            "Ça t'aide à comprendre la séquence d'événements."
         ],
         "benefits": [
-            
+            "Clarifie la séquence chronologique des événements dans ton application.",
+            "Aide à détecter les éventuels problèmes de synchronisation ou de délais.",
+            "Facilite la planification et l'optimisation des processus."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour montrer la séquence des événements.",
+            "Marque clairement le début et la fin de chaque événement ou action.",
+            "Indique les durées ou les délais si nécessaire."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://images.edrawmax.com/images/knowledge/timing-diagram/state-or-condition-timeline.jpg"
         }
     },
     {
@@ -22,17 +30,25 @@
         "title": "Aperçu des interactions",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme d'aperçu des interactions, c'est un peu comme une vue d'ensemble des conversations entre les acteurs de ton application.",
+            "C'est un moyen de montrer comment les différentes parties interagissent.",
+            "\n",
+            "Imagine-le comme une fenêtre sur les échanges entre les utilisateurs ou les systèmes externes et ton application.",
+            "Ça t'aide à comprendre les interactions principales."
         ],
         "benefits": [
-            
+            "Clarifie les interactions principales entre les acteurs et l'application.",
+            "Aide à comprendre les scénarios d'utilisation et les flux de communication.",
+            "Facilite la communication avec les parties prenantes et les membres de l'équipe."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour montrer qui communique avec qui.",
+            "Indique les messages ou les actions échangés entre les acteurs.",
+            "Reste concentré sur les interactions essentielles."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/discovery-page/UML-interaction-diagram/UML-Interaction-Overview-Diagram@2x.png"
         }
     },
     {
@@ -40,17 +56,25 @@
         "title": "Communication",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme de communication, c'est comme une conversation visuelle entre les acteurs de ton application.",
+            "C'est un moyen de montrer comment ils échangent des informations.",
+            "\n",
+            "Imagine-le comme une représentation graphique des dialogues entre les acteurs.",
+            "Ça t'aide à voir qui parle à qui et quelles informations sont échangées."
         ],
         "benefits": [
-            
+            "Clarifie les échanges d'informations entre les acteurs et l'application.",
+            "Aide à comprendre les dialogues et les scénarios d'utilisation.",
+            "Facilite la communication avec les parties prenantes et l'équipe de développement."
         ],
         "goodPratices": [
-
+            "Utilise des lignes pour montrer les messages échangés entre les acteurs.",
+            "Indique clairement qui envoie le message et à qui il est destiné.",
+            "Reste simple et concentre-toi sur les interactions essentielles."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/07/web-store-communication-diagram-1.jpg"
         }
     },
     {
@@ -58,17 +82,23 @@
         "title": "États-transitions",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme d'état-transition, c'est comme une carte qui montre les différents états dans lesquels un objet ou une entité peut se trouver et comment il passe de l'un à l'autre.",
+            "Imagine-le comme une représentation visuelle des différentes phases de vie d'un objet ou d'un processus.",
+            "Ça t'aide à comprendre comment il évolue au fil du temps."
         ],
         "benefits": [
-            
+            "Clarifie les différentes phases de vie d'un objet ou d'un processus.",
+            "Aide à modéliser des comportements dynamiques.",
+            "Facilite la compréhension des applications qui évoluent dans le temps."
         ],
         "goodPratices": [
-
+            "Utilise des états pour représenter les conditions ou les phases spécifiques.",
+            "Utilise des flèches pour montrer les transitions entre les états.",
+            "Indique les événements ou les actions qui déclenchent les transitions."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2020/11/cellphone-state-diagram.jpg"
         }
     },
     {
@@ -76,17 +106,29 @@
         "title": "Cas d'utilisation",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme de cas d'utilisation, c'est comme une liste des d'actions que les gens peuvent faire avec ton application.",
+            "C'est une façon de montrer comment les personnes interagissent avec ton application et quelles actions ils peuvent effectuer.",
+            "\n",
+            "Imagine-le comme une feuille de route pour comprendre ce que les utilisateurs veulent de ton application.",
+            "Ça t'aide à savoir quelles fonctionnalités doivent être développées."
         ],
         "goodPratices": [
-
+            "Sois clair et simple dans la description des actions des utilisateurs.",
+            "Identifie les acteurs (utilisateurs ou systèmes externes) de manière évidente.",
+            "Évite la complexité excessive, garde-le simple."
         ],
         "benefits": [
-            
+            "Ça t'aide à comprendre ce que les personnes veulent vraiment.",
+            "C'est un outil de communication génial entre l'équipe de développement et les utilisateurs.",
+            "Ça te permet de prioriser les fonctionnalités en fonction des besoins réels."
         ],
         "example": {
-            "description": [],
-            "image": ""
+            "description": [
+                "Imagine que tu développes une application Ecommerce, deux acteurs rentrent en jeu, l'utilisateur et l'administrateur.",
+                "L'utilisateur peut se connecter, créer un compte, voir les détails de son compte, voir ses commandes ou encore la possibilité de pouvoir supprimer son compte.",
+                "L'administrateur peut par exemple supprimer un utilisateur, ce qui enclenchera la fermeture de son compte comme ci l'utilisateur avait par lui-même supprimer son compte."
+            ],
+            "image": "https://static.blog4ever.com/2014/08/780066/artfichier_780066_6659297_201612123604428.png"
         }
     },
     {
@@ -94,17 +136,25 @@
         "title": "Séquence",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme de séquence, c'est comme une bande dessinée qui raconte comment les acteurs interagissent avec ton application.",
+            "C'est un moyen de montrer les dialogues entre les objets ou les acteurs au fil du temps.",
+            "\n",
+            "Imagine-le comme une vue chronologique des interactions entre les différents acteurs et objets dans ton application.",
+            "Ça t'aide à comprendre comment les choses se déroulent étape par étape."
         ],
         "goodPratices": [
-
+            "Utilise des lignes pour représenter les acteurs ou les objets.",
+            "Utilise des flèches pour montrer les messages échangés entre les lignes.",
+            "Indique clairement la séquence chronologique des actions."
         ],
         "benefits": [
-            
+            "Clarifie les interactions entre les acteurs et les objets au fil du temps.",
+            "Aide à comprendre les scénarios d'utilisation et les flux de communication.",
+            "Facilite la communication et la discussion des processus."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://s3.amazonaws.com/thumbnails.venngage.com/template/dcf0931d-7c44-4613-a4b9-773363d8bc22.png"
         }
     },
     {
@@ -112,17 +162,25 @@
         "title": "Activités",
         "subTitle": "Diagramme UML",
         "description": [
-
+            "Le diagramme d'activités, c'est comme une feuille de route visuelle pour un processus ou une séquence d'actions.",
+            "C'est un moyen de montrer comment les tâches se déroulent étape par étape.",
+            "\n",
+            "Imagine-le comme une représentation graphique d'un processus, d'une procédure ou d'un flux de travail.",
+            "Ça t'aide à comprendre comment les actions s'enchaînent."
         ],
         "benefits": [
-            
+            "Clarifie les étapes d'un processus ou d'une procédure.",
+            "Aide à modéliser des flux de travail et des scénarios d'activités.",
+            "Facilite la communication et la documentation des processus."
         ],
         "goodPratices": [
-
+            "Utilise des rectangles pour représenter les actions ou les étapes.",
+            "Utilise des flèches pour montrer la séquence d'exécution des actions.",
+            "Indique clairement les décisions (branches) et les points de jonction (fusion) si nécessaire."
         ],
         "example": {
             "description": [],
-            "image": ""
+            "image": "https://www.cybermedian.com/wp-content/uploads/2022/01/0BANW5jy0WgcRXUdM.png"
         }
     }
 ]
