@@ -1,5 +1,5 @@
 import { MainLayout } from "./components/layouts";
-import { HomePage, UmlPage } from "./pages";
+import { HomePage, DataPage } from "./pages";
 
 const routes = [
     {
@@ -7,8 +7,9 @@ const routes = [
         element: <MainLayout />,
         childrens: [
             { path: '/', element: <HomePage /> },
-            { path: '/uml-structs/:uuid', element: <UmlPage /> },
-            { path: '/uml-behaviors/:uuid', element: <UmlPage /> }
+            { path: '/uml-structs/:uuid', element: <DataPage /> },
+            { path: '/uml-behaviors/:uuid', element: <DataPage /> },
+            { path: '/merise/:uuid', element: <DataPage /> }
         ]
     }
 ];
