@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs";
 
 import SearchDropdownResult from "./SearchDropdownResult";
 
-import { diagramsUmlBehaviors, diagramsUmlStructs } from "../../data";
+import { diagramsUmlBehaviors, diagramsUmlStructs, diagramsMerise } from "../../data";
 import { useResponsive } from "../../hooks";
 
 const SearchBar = () => {
@@ -27,9 +27,12 @@ const SearchBar = () => {
 
     const resultsUmlStructs = diagramsUmlStructs.filter(searchFilter).map(diagram => ({ ...diagram, routePrefix: "uml-structs" }));
     const resultsUmlBehaviors = diagramsUmlBehaviors.filter(searchFilter).map(diagram => ({ ...diagram, routePrefix: "uml-behaviors" }));
+    const resultsMerise = diagramsMerise.filter(searchFilter).map(diagram => ({ ...diagram, routePrefix: "merise" }));
+    
     const results = [
         ...resultsUmlStructs,
-        ...resultsUmlBehaviors
+        ...resultsUmlBehaviors,
+        ...resultsMerise
     ];
 
     return (
