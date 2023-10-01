@@ -4,19 +4,25 @@
         "title": "Conceptuel des données",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MCD, c'est comme une carte qui montre les principales entités et les relations entre elles dans ton application.",
+            "C'est un moyen de représenter les concepts clés.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble des données essentielles que ton application doit gérer.",
+            "Ça t'aide à identifier les entités et à comprendre comment elles sont liées."
         ],
         "goodPratices": [
-
+            "Utilise des rectangles pour représenter les entités.",
+            "Utilise des losanges pour représenter les relations entre les entités.",
+            "Assure-toi que les relations ont des noms significatifs."
         ],
         "benefits": [
-
+            "Clarifie les principales entités et relations.",
+            "Aide à comprendre comment les données sont organisées et connectées.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
-            "image": ""
+            "description": [],
+            "image": "https://media.licdn.com/dms/image/C4D12AQF9lMLwndv5pQ/article-cover_image-shrink_600_2000/0/1630081141240?e=2147483647&v=beta&t=-WLyyr0GqazNF_RHMsGsF66UCcqSTQvt2sbrG-4d7ec"
         }
     },
     {
@@ -24,19 +30,25 @@
         "title": "Conceptuel de traitement",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MCT, c'est comme un schéma qui montre comment les processus ou les traitements fonctionnent dans ton application.",
+            "C'est un moyen de représenter les actions clés.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble des principales opérations que ton application doit effectuer.",
+            "Ça t'aide à identifier les processus et à comprendre comment ils sont liés."
         ],
         "goodPratices": [
-
+            "Utilise des rectangles pour représenter les processus ou les traitements.",
+            "Utilise des flèches pour montrer la séquence ou le flux des traitements.",
+            "Assure-toi que les processus ont des noms significatifs."
         ],
         "benefits": [
-
+            "Clarifie les principales actions ou processus dans l'application",
+            "Aide à comprendre comment les traitements sont organisés et interagissent.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
-            "image": ""
+            "description": [],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/MCT_des_contributions_wiki.png"
         }
     },
     {
@@ -44,19 +56,25 @@
         "title": "Conceptuel de communication",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MCC, c'est comme une représentation visuelle des échanges d'informations entre les acteurs et les traitements dans ton application.",
+            "C'est un moyen de montrer comment les données circulent.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble des flux d'informations entre les acteurs et les processus.",
+            "Ça t'aide à comprendre comment les données sont échangées."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour représenter les flux d'informations.",
+            "Indique clairement les acteurs et les traitements impliqués dans les échanges.",
+            "Assure-toi que les flux d'informations ont des noms significatifs."
         ],
         "benefits": [
-
+            "Clarifie les échanges d'informations entre les acteurs et les traitements.",
+            "Aide à comprendre comment les données circulent à travers l'application.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
-            "image": ""
+            "description": [],
+            "image": "https://web.maths.unsw.edu.au/~lafaye/CCM/merise/images/contexte.gif"
         }
     },
     {
@@ -64,18 +82,24 @@
         "title": "Organisationnel de données",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MOD, c'est comme une vue détaillée de comment les données sont stockées et organisées dans ta base de données.",
+            "C'est un moyen de montrer la structure interne des données.",
+            "\n",
+            "Imagine-le comme un plan pour savoir comment les données sont conservées, quelles tables existent, et comment elles sont liées.",
+            "Ça t'aide à comprendre l'architecture de ta base de données."
         ],
         "goodPratices": [
-
+            "Utilise des rectangles pour représenter les tables de base de données.",
+            "Utilise des flèches pour montrer les relations entre les tables.",
+            "Assure-toi que les noms de tables et de champs sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie la structure interne de la base de données.",
+            "Aide à concevoir une base de données efficace et bien organisée.",
+            "Facilite la communication entre les concepteurs et les développeurs de bases de données."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     },
@@ -84,18 +108,24 @@
         "title": "Organisationnel de traitement",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MOT, c'est comme une carte qui montre comment les traitements ou les fonctions sont organisés et interagissent dans ton système d'information.",
+            "C'est un moyen de représenter la logique de traitement.",
+            "\n",
+            "Imagine-le comme un plan pour savoir comment les actions sont effectuées, quelles sont les étapes et les interactions entre les traitements.",
+            "Ça t'aide à comprendre comment la logique opérationnelle est structurée."
         ],
         "goodPratices": [
-
+            "Utilise des rectangles pour représenter les traitements ou les fonctions.",
+            "Utilise des flèches pour montrer les interactions entre les traitements.",
+            "Assure-toi que les noms des traitements sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie la logique de traitement dans l'application.",
+            "Aide à concevoir une architecture logicielle efficace.",
+            "Facilite la communication entre les concepteurs et les développeurs."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     },
@@ -104,18 +134,24 @@
         "title": "Flux de données",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MFD, c'est comme une carte qui montre comment les données circulent entre les entités, les processus et les fichiers dans ton système d'information.",
+            "C'est un moyen de représenter les mouvements de données.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble des échanges de données entre les différents composants de ton système.",
+            "Ça t'aide à comprendre comment les informations sont collectées, traitées et stockées."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour représenter les flux de données.",
+            "Indique clairement les entités, les processus et les fichiers impliqués dans les échanges.",
+            "Assure-toi que les noms des flux de données sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie les mouvements de données à travers le système.",
+            "Aide à comprendre comment les informations sont collectées, traitées et partagées.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     },
@@ -124,18 +160,24 @@
         "title": "Flux de contrôle",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme MFC, c'est comme une représentation visuelle de la manière dont le contrôle ou l'exécution des opérations se déroule dans ton système d'information.",
+            "C'est un moyen de représenter les itinéraires de contrôle.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble des chemins que suivent les actions ou les instructions à l'intérieur de ton système.",
+            "Ça t'aide à comprendre comment les processus sont coordonnés et exécutés."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour représenter les flux de contrôle.",
+            "Indique clairement les processus, les actions et les décisions impliqués dans les itinéraires de contrôle.",
+            "Assure-toi que les noms des flux de contrôle sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie les itinéraires de contrôle à l'intérieur du système.",
+            "Aide à comprendre comment les opérations sont coordonnées et exécutées.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     },
@@ -144,18 +186,24 @@
         "title": "Architecture des Systèmes d'Information",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme ASI, c'est comme une vue d'ensemble de la manière dont les différents composants et modules interagissent pour former l'architecture globale de ton système d'information.",
+            "C'est un moyen de représenter la structure générale.",
+            "\n",
+            "Imagine-le comme une carte conceptuelle de l'ensemble de ton système, montrant comment les différents éléments s'assemblent pour atteindre les objectifs.",
+            "Ça t'aide à comprendre l'organisation générale de ton système."
         ],
         "goodPratices": [
-
+            "Utilise des blocs ou des rectangles pour représenter les composants ou les modules.",
+            "Utilise des flèches pour montrer les interactions ou les connexions entre les composants.",
+            "Assure-toi que les noms des composants sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie l'architecture globale du système d'information.",
+            "Aide à comprendre comment les composants interagissent pour atteindre les objectifs.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     },
@@ -164,18 +212,24 @@
         "title": "Flux d'Architecture",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme DFA, c'est comme une représentation visuelle des échanges d'informations et de contrôle entre les différents composants et modules de l'architecture de ton système d'information.",
+            "C'est un moyen de représenter les flux essentiels.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble des interactions et des transferts d'informations qui se produisent entre les éléments architecturaux de ton système.",
+            "Ça t'aide à comprendre comment les composants collaborent."
         ],
         "goodPratices": [
-
+            "Utilise des flèches pour représenter les flux d'informations et de contrôle.",
+            "Indique clairement les composants ou les modules impliqués dans les échanges.",
+            "Assure-toi que les noms des flux sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie les flux essentiels au sein de l'architecture du système.",
+            "Aide à comprendre comment les informations circulent et comment le contrôle est orchestré.",
+            "Facilite la communication entre les architectes et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     },
@@ -184,18 +238,24 @@
         "title": "Architecture des Organisations",
         "subTitle": "Diagramme Merise",
         "description": [
-
+            "Le diagramme DAO, c'est comme une représentation visuelle de la structure organisationnelle de ton système d'information, montrant comment les entités et les acteurs sont organisés et interagissent.",
+            "C'est un moyen de représenter les relations humaines.",
+            "\n",
+            "Imagine-le comme une vue d'ensemble de l'organisation de ton système, montrant qui fait quoi et comment les rôles sont distribués.",
+            "Ça t'aide à comprendre la structure organisationnelle."
         ],
         "goodPratices": [
-
+            "Utilise des rectangles pour représenter les entités ou les acteurs.",
+            "Utilise des flèches pour montrer les relations ou les interactions entre les entités.",
+            "Assure-toi que les noms des entités et des acteurs sont significatifs."
         ],
         "benefits": [
-
+            "Clarifie la structure organisationnelle du système.",
+            "Aide à comprendre comment les entités et les acteurs interagissent.",
+            "Facilite la communication entre les concepteurs et les parties prenantes."
         ],
         "example": {
-            "description": [
-
-            ],
+            "description": [],
             "image": ""
         }
     }
