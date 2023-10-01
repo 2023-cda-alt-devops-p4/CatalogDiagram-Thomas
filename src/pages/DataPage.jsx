@@ -81,6 +81,7 @@ const UmlStructsPage = () => {
                         </Description>
                         {currentDiagram?.example?.image && (
                             <DiagramImageExample 
+                                $isMobileOrTablet={isGlobalMobile || isTablet}
                                 src={currentDiagram?.example?.image}
                                 alt={`Diagramme de ${currentDiagram?.title.toLowerCase()}`}
                             />
@@ -116,9 +117,14 @@ const HeaderPage = styled.div`
 `;
 
 const DiagramImageExample = styled.img`
-    width: 50%;
     height: auto;
     object-fit: cover;
+
+    ${({ $isMobileOrTablet }) => $isMobileOrTablet ? `
+        width: 100%;
+    ` : `
+        width: 50%;
+    `}
 `;
 
 const TitlePage = styled.h1`
